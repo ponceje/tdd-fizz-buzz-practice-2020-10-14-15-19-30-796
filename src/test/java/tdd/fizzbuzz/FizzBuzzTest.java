@@ -56,6 +56,16 @@ public class FizzBuzzTest {
         //
         assertEquals(result,"FizzWhizz");
     }
+    @Test
+    public void should_return_BuzzWhizz_when_count_off_given_order_number(){
+        //
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int orderNumber = 35;
+        //
+        String result = fizzBuzz.getResult(orderNumber);
+        //
+        assertEquals(result,"BuzzWhizz");
+    }
 
 
 }
