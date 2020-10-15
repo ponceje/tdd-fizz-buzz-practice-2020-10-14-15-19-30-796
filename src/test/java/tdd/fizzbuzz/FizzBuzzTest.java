@@ -30,7 +30,7 @@ public class FizzBuzzTest {
     public void should_return_Whizz_when_count_off_given_order_number(){
         //
         FizzBuzz fizzBuzz = new FizzBuzz();
-        int orderNumber = 21;
+        int orderNumber = 7;
         //
         String result = fizzBuzz.getResult(orderNumber);
         //
