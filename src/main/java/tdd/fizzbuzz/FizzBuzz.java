@@ -11,22 +11,19 @@ public class FizzBuzz {
     public static final int SEVEN = 7;
 
     public String getResult(int orderNumber){
-        String result="";
+        StringBuilder result = new StringBuilder();
         if(isModulo(orderNumber, THREE)){
-            result+=FIZZ;
+            result.append(FIZZ);
         }
         if(isModulo(orderNumber, FIVE)){
-            result+=BUZZ;
+            result.append(BUZZ);
         }
         if(isModulo(orderNumber, SEVEN)){
-            result+=WHIZZ;
+            result.append(WHIZZ);
         }
-        if(result==""){
-            return String.valueOf(orderNumber);
-        }
-        return result;
+        String resultStr =result.toString() ;
+        return resultStr.isEmpty()?String.valueOf(orderNumber):resultStr;
     }
-
     private boolean isModulo(int orderNumber, int modulo) {
         return orderNumber % modulo == ZERO;
     }
