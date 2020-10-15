@@ -13,6 +13,9 @@ public class FizzBuzz {
         else if(orderNumber%3 == 0 && orderNumber%7 == 0){
             return new StringBuilder().append(FIZZ).append(WHIZZ).toString();
         }
+        else if(orderNumber%5 == 0 && orderNumber%7 == 0){
+            return new StringBuilder().append(BUZZ).append(WHIZZ).toString();
+        }
         else if(orderNumber%3 == 0){
             return FIZZ;
         }
