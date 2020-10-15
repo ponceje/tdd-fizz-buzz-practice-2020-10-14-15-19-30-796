@@ -11,28 +11,17 @@ public class FizzBuzz {
     public static final int SEVEN = 7;
 
     public String getResult(int orderNumber){
-        if(isModulo(orderNumber, THREE) && isModulo(orderNumber, FIVE) && isModulo(orderNumber, SEVEN)){
-            return new StringBuilder().append(FIZZ).append(BUZZ).append(WHIZZ).toString();
-        }
-        if(isModulo(orderNumber, THREE) && isModulo(orderNumber, FIVE)){
-            return new StringBuilder().append(FIZZ).append(BUZZ).toString();
-        }
-        if(isModulo(orderNumber, THREE) && isModulo(orderNumber, SEVEN)){
-            return new StringBuilder().append(FIZZ).append(WHIZZ).toString();
-        }
-        if(isModulo(orderNumber, FIVE) && isModulo(orderNumber, SEVEN)){
-            return new StringBuilder().append(BUZZ).append(WHIZZ).toString();
-        }
+        String result=null;
         if(isModulo(orderNumber, THREE)){
-            return FIZZ;
+            result+=FIZZ;
         }
         if(isModulo(orderNumber, FIVE)){
-            return BUZZ;
+            result+=BUZZ;
         }
         if(isModulo(orderNumber, 7)){
-            return WHIZZ;
+            result+=WHIZZ;
         }
-        return String.valueOf(orderNumber);
+        return result;
     }
 
     private boolean isModulo(int orderNumber, int modulo) {
