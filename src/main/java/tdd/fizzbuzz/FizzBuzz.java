@@ -11,15 +11,18 @@ public class FizzBuzz {
     public static final int SEVEN = 7;
 
     public String getResult(int orderNumber){
-        String result=null;
+        String result="";
         if(isModulo(orderNumber, THREE)){
             result+=FIZZ;
         }
         if(isModulo(orderNumber, FIVE)){
             result+=BUZZ;
         }
-        if(isModulo(orderNumber, 7)){
+        if(isModulo(orderNumber, SEVEN)){
             result+=WHIZZ;
+        }
+        if(result==""){
+            return String.valueOf(orderNumber);
         }
         return result;
     }
