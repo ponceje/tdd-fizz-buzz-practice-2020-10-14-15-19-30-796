@@ -27,7 +27,8 @@ public class FizzBuzz {
         }
         else if(orderNumber%7 == 0){
             return WHIZZ;
+        }else{
+            return String.valueOf(orderNumber);
         }
-        return null;
     }
 }
